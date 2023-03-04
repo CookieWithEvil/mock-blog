@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gh-mock-site/static/css/main.2efa84eb.css",
+    "main.js": "/gh-mock-site/static/js/main.d223b027.js",
+    "static/js/787.28cb0dcd.chunk.js": "/gh-mock-site/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/gh-mock-site/index.html",
+    "main.2efa84eb.css.map": "/gh-mock-site/static/css/main.2efa84eb.css.map",
+    "main.d223b027.js.map": "/gh-mock-site/static/js/main.d223b027.js.map",
+    "787.28cb0dcd.chunk.js.map": "/gh-mock-site/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2efa84eb.css",
+    "static/js/main.d223b027.js"
+  ]
+}

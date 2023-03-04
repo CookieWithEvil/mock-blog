@@ -1,0 +1,11 @@
+{
+    "home": "Home",
+    "news": "News",
+    "profile": "Profile",
+    "loadMore": "Load more",
+    "login": {
+        "username": "Username",
+        "password": "Password",
+        "submit": "Submit"
+    }
+  }
