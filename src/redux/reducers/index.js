@@ -1,5 +1,3 @@
-import { ADD_NOTIFICATION, CHANGE_NOTIFICATIONS, LOGIN } from "../types";
-
 const initialState = {
   username: null,
   password: null,
@@ -7,23 +5,22 @@ const initialState = {
 };
 
 export const rootReducer = (state = initialState, action) => {
-  console.log("action", action);
   switch (action.type) {
     case "USERS_RECEIVED":
       return {
         ...state,
         users: action.data,
+        pagesAmount: action.data.length,
       };
     case "POSTS_RECEIVED":
+      const iteratedPosts = action.data.map((post) => ({
+        ...post,
+        key: `${new Date().getMilliseconds()}-${post.id}`,
+      }));
+
       return {
         ...state,
-        posts: [...(state?.posts ?? []), ...action.data],
-      };
-    case "GET_PAGES_AMOUNT":
-      console.log({ action });
-      return {
-        ...state,
-        pagesAmount: 10,
+        posts: [...(state?.posts ?? []), ...iteratedPosts],
       };
     case "LOGIN":
       return {

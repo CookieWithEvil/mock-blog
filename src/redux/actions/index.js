@@ -1,17 +1,4 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { ADD_NOTIFICATION, CHANGE_NOTIFICATIONS, LOGIN } from "../types";
-
 const BASE_URL = "https://jsonplaceholder.typicode.com";
-
-export const addNotification = (payload) => ({
-  type: ADD_NOTIFICATION,
-  payload,
-});
-
-export const changeNotifications = (payload) => ({
-  type: CHANGE_NOTIFICATIONS,
-  payload,
-});
 
 export const login = (data) => ({
   type: "LOGIN",

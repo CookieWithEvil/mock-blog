@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, HashRouter } from "react-router-dom";
 import { Box, Button, ButtonGroup } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -66,6 +66,7 @@ function App() {
               </Button>
             </ButtonGroup>
           </Box>
+          {/* <HashRouter> */}
           <Routes>
             <Route path="/">
               <Route index element={<Main />} />
@@ -74,6 +75,7 @@ function App() {
               <Route path="login" element={<Login />} />
             </Route>
           </Routes>
+          {/* </HashRouter> */}
         </>
       ) : null}
     </div>

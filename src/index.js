@@ -8,7 +8,6 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { rootReducer } from "./redux/reducers";
-
 import App from "./components/App";
 import News from "./components/News";
 import Profile from "./components/Profile";
@@ -16,7 +15,11 @@ import Login from "./components/Login";
 
 import reportWebVitals from "./reportWebVitals";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  HashRouter,
+} from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -44,9 +47,11 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+    <HashRouter>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </HashRouter>
   </React.StrictMode>
 );
 

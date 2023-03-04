@@ -47,9 +47,9 @@ function Login() {
       dispatch(login({ username, password }));
     } else {
       if (!username || !password) {
-        setAlertMessage("All fields should be filled");
+        setAlertMessage(t("login.fillFields"));
       } else {
-        setAlertMessage("Username or password isn't correct");
+        setAlertMessage(t("login.incorrectFields"));
       }
       setOpen(true);
     }

@@ -16,11 +16,10 @@ const Item = styled(Card)(({ theme }) => ({
 function News() {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const { posts } = useSelector((store) => store);
+  const { posts, pagesAmount } = useSelector((store) => store);
 
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
-  const [pagesAmount, setPagesAmount] = useState(10);
 
   useEffect(() => {
     dispatch(getUsers());
@@ -43,7 +42,7 @@ function News() {
     >
       <Grid container spacing={2} justifyContent="center">
         {data?.map((item) => (
-          <Grid item xs={9} key={`${item.id}-${item.userId}-${item.title}`}>
+          <Grid item xs={9} key={item.key}>
             <Item>
               <Typography variant="h4" gutterBottom>
                 {item.title}
