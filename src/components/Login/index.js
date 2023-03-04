@@ -36,8 +36,10 @@ function Login() {
   };
 
   useEffect(() => {
-    if (isAutorised) {
-      navigate("/profile", { replace: true });
+    const localState = JSON.parse(localStorage.getItem("reduxState"));
+
+    if (localState.isAutorised) {
+      navigate("/profile");
     }
   }, [isAutorised]);
 

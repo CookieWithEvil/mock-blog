@@ -10,7 +10,9 @@ function Profile() {
   const { isAutorised } = useSelector((store) => store);
 
   useEffect(() => {
-    if (!isAutorised) {
+    const localState = JSON.parse(localStorage.getItem("reduxState"));
+
+    if (!localState.isAutorised) {
       navigate("/login");
     }
   }, [isAutorised]);

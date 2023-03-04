@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import throttle from "lodash/throttle";
 import "./index.css";
 
 import "./i18n";
@@ -9,47 +10,26 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { rootReducer } from "./redux/reducers";
 import App from "./components/App";
-import News from "./components/News";
-import Profile from "./components/Profile";
-import Login from "./components/Login";
+
+import { loadState, saveState } from "./localStorage";
 
 import reportWebVitals from "./reportWebVitals";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-  HashRouter,
-} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "news",
-        element: <News />,
-      },
-      {
-        path: "profile",
-        element: <Profile />,
-      },
-      {
-        path: "login",
-        element: <Login />,
-      },
-    ],
-  },
-]);
+const persistedState = loadState();
+const store = createStore(rootReducer, persistedState, applyMiddleware(thunk));
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+store.subscribe(() => {
+  localStorage.setItem("reduxState", JSON.stringify(store.getState()));
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HashRouter>
       <Provider store={store}>
-        <RouterProvider router={router} />
+        <App />
       </Provider>
     </HashRouter>
   </React.StrictMode>
