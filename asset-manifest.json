@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/mock-site/index.html/static/css/main.2efa84eb.css",
-    "main.js": "/mock-site/index.html/static/js/main.f2ec7ba3.js",
-    "static/js/787.28cb0dcd.chunk.js": "/mock-site/index.html/static/js/787.28cb0dcd.chunk.js",
-    "static/media/sea.jpg": "/mock-site/index.html/static/media/sea.e1374851b57c9259ad67.jpg",
-    "index.html": "/mock-site/index.html/index.html",
-    "main.2efa84eb.css.map": "/mock-site/index.html/static/css/main.2efa84eb.css.map",
-    "main.f2ec7ba3.js.map": "/mock-site/index.html/static/js/main.f2ec7ba3.js.map",
-    "787.28cb0dcd.chunk.js.map": "/mock-site/index.html/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/mock-site/static/css/main.2efa84eb.css",
+    "main.js": "/mock-site/static/js/main.609e5d16.js",
+    "static/js/787.28cb0dcd.chunk.js": "/mock-site/static/js/787.28cb0dcd.chunk.js",
+    "static/media/sea.jpg": "/mock-site/static/media/sea.e1374851b57c9259ad67.jpg",
+    "index.html": "/mock-site/index.html",
+    "main.2efa84eb.css.map": "/mock-site/static/css/main.2efa84eb.css.map",
+    "main.609e5d16.js.map": "/mock-site/static/js/main.609e5d16.js.map",
+    "787.28cb0dcd.chunk.js.map": "/mock-site/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2efa84eb.css",
-    "static/js/main.f2ec7ba3.js"
+    "static/js/main.609e5d16.js"
   ]
 }
