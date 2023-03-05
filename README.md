@@ -1,2 +1,2 @@
-### deployed here: [https://cookiewithevil.github.io/mock-site/main](https://cookiewithevil.github.io/mock-site/main)
+### deployed here: [https://cookiewithevil.github.io/mock-site](https://cookiewithevil.github.io/mock-site)
 
