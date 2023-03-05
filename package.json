@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://cookiewithevil.github.io/mock-site/index.html",
+  "homepage": "https://cookiewithevil.github.io/mock-site/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",

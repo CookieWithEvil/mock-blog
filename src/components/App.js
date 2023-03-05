@@ -34,7 +34,7 @@ function App() {
               margin: "auto",
             }}
           >
-            <Link to="/">
+            <Link to="/main">
               <Button variant="contained">{t("home")}</Button>
             </Link>
 
@@ -66,16 +66,12 @@ function App() {
               </Button>
             </ButtonGroup>
           </Box>
-          {/* <HashRouter> */}
           <Routes>
-            <Route path="/">
-              <Route index element={<Main />} />
-              <Route path="news" element={<News />} />
-              <Route path="profile" element={<Profile />} />
-              <Route path="login" element={<Login />} />
-            </Route>
+            <Route path="main" element={<Main />} />
+            <Route path="news" element={<News />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="login" element={<Login />} />
           </Routes>
-          {/* </HashRouter> */}
         </>
       ) : null}
     </div>
