@@ -39,7 +39,7 @@ function Login() {
     const localState = JSON.parse(localStorage.getItem("reduxState"));
 
     if (localState.isAutorised) {
-      navigate("/profile");
+      navigate("/mock-site/profile");
     }
   }, [isAutorised]);
 

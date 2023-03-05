@@ -1,0 +1,13 @@
+{
+    "home": "Home",
+    "news": "News",
+    "profile": "Profile",
+    "loadMore": "Load more",
+    "login": {
+        "username": "Username",
+        "password": "Password",
+        "submit": "Submit",
+        "fillFields": "All fields should be filled",
+        "incorrectFields": "Username or password isn't correct"
+    }
+  }

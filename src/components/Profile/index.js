@@ -13,11 +13,11 @@ function Profile() {
     const localState = JSON.parse(localStorage.getItem("reduxState"));
 
     if (!localState.isAutorised) {
-      navigate("/login");
+      navigate("/mock-site/login");
     }
   }, [isAutorised]);
 
-  return <>Довільний контент</>;
+  return <>**********</>;
 }
 
 export default Profile;

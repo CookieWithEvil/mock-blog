@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, Link, HashRouter } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import { Box, Button, ButtonGroup } from "@mui/material";
-import { useTranslation } from "react-i18next";
+import { useTranslation, withTranslation } from "react-i18next";
 
 import Main from "./Main";
 import News from "./News";
@@ -17,6 +17,7 @@ function App() {
 
   useEffect(() => {
     i18n.changeLanguage(language);
+    console.log("language", language);
   }, [language]);
 
   return (
@@ -34,15 +35,15 @@ function App() {
               margin: "auto",
             }}
           >
-            <Link to="/main">
+            <Link to="/mock-site/main">
               <Button variant="contained">{t("home")}</Button>
             </Link>
 
             <div>
-              <Link to="/news">
+              <Link to="/mock-site/news">
                 <Button>{t("news")}</Button>
               </Link>
-              <Link to="/profile">
+              <Link to="/mock-site/profile">
                 <Button>{t("profile")}</Button>
               </Link>
             </div>
@@ -67,10 +68,14 @@ function App() {
             </ButtonGroup>
           </Box>
           <Routes>
-            <Route path="main" element={<Main />} />
-            <Route path="news" element={<News />} />
-            <Route path="profile" element={<Profile />} />
-            <Route path="login" element={<Login />} />
+            <Route path="/mock-site/main" element={<Main />} />
+            <Route path="/mock-site/news" element={<News />} />
+            <Route path="/mock-site/profile" element={<Profile />} />
+            <Route path="/mock-site/login" element={<Login />} />
+            <Route
+              path="/mock-site/*"
+              element={<Navigate to="/mock-site/main" replace />}
+            />
           </Routes>
         </>
       ) : null}
@@ -78,4 +83,4 @@ function App() {
   );
 }
 
-export default App;
+export default withTranslation()(App);
